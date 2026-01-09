@@ -1,4 +1,4 @@
-#🔐 Webcam Security Dashboard
+#Webcam Security Dashboard
 
 A Windows-based webcam security and privacy control system that combines facial recognition, system-level access control, and real-time intrusion monitoring to prevent unauthorized camera usage.
 
