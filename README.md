@@ -1,41 +1,97 @@
-#Webcam Security Dashboard
+# 🔐 Webcam Security Dashboard
 
-A Windows-based webcam security and privacy control system that combines facial recognition, system-level access control, and real-time intrusion monitoring to prevent unauthorized camera usage.
+A **Windows-based webcam privacy and security system** that combines **facial recognition**, **system-level access control**, and **real-time intrusion detection** to prevent unauthorized camera usage.
 
-The application enables secure webcam enable/disable operations using facial authentication, monitors Windows registry changes for suspicious activity, and automatically captures evidence (photos/videos) and sends email alerts on intrusion attempts.
+The application allows only **verified users** to enable or disable the webcam using **face authentication**, continuously monitors **Windows registry changes**, and automatically **captures evidence (images/videos)** with **email alerts** on suspicious activity.
 
-🚀 Key Features
+---
 
-Facial recognition–based access control using OpenCV (LBPH), ensuring only authorized users can enable or disable the webcam
+## ✨ Features
 
-User-level (HKCU) and system-level (HKLM) webcam control, including elevated admin operations via secure scripts
+* **Facial recognition–based access control** using OpenCV (LBPH) for secure webcam enable/disable actions
+* **User-level (HKCU) and system-level (HKLM) webcam control**, including admin-privileged operations
+* **Real-time Windows registry monitoring** to detect unauthorized webcam activation
+* **Automatic intruder evidence capture** (photos and video clips) with email notifications
+* **Secure user authentication** with encrypted credentials (bcrypt) and persistent sessions
+* **Modern desktop UI** with dashboard, logs, intruder gallery, and role-based access
 
-Real-time registry monitoring to detect unauthorized webcam activation attempts
+---
 
-Automatic intruder evidence capture (images + video clips) with email alerts
+## 🛠 Tech Stack
 
-Secure authentication system with encrypted credentials (bcrypt) and persistent sessions
+* **Python**
+* **OpenCV** (Face Recognition – LBPH)
+* **Tkinter** (Desktop UI)
+* **SQLite** + **bcrypt** (User authentication)
+* **Windows Registry (HKCU / HKLM)**
+* **SMTP Email Alerts**
+* **Batch & VBScript** (Elevated system controls)
 
-Modern desktop UI built with Tkinter, featuring logs, intruder gallery, and role-based access
+---
 
-🛠 Tech Stack
+## 🖥 Platform Support
 
-Python, OpenCV, Tkinter
+* **Windows OS**
+* Requires **Python 3.9+**
+* Admin privileges required for system-level webcam control
 
-Windows Registry (HKCU / HKLM)
+---
 
-SQLite + bcrypt for secure user management
+## 🎯 Use Cases
 
-SMTP email alerts
+* Webcam privacy protection
+* Unauthorized access detection
+* Insider threat monitoring
+* Security-focused desktop automation
 
-Batch & VBScript for elevated system controls
+---
 
-🎯 Use Cases
+## 🚀 Getting Started
 
-Webcam privacy protection
+### Prerequisites
 
-Insider threat detection
+```bash
+Python 3.9+
+pip install opencv-python pillow bcrypt
+```
 
-Unauthorized access auditing
+### Run the Application
 
-Security-focused desktop automation
+```bash
+python webcam_security_app.py
+```
+
+> ⚠️ Ensure the batch (`.bat`) and VBS scripts are present in the same directory for system-level controls.
+
+---
+
+## 📸 How It Works (High Level)
+
+1. User signs in with credentials
+2. Facial enrollment trains a recognition model
+3. Webcam enable/disable actions require face verification
+4. Registry changes are continuously monitored
+5. Unauthorized attempts trigger evidence capture and email alerts
+
+---
+
+## 🔒 Security Notes
+
+* Passwords are **hashed using bcrypt**
+* Facial data is stored locally
+* Email credentials should be stored securely (use environment variables in production)
+
+---
+
+## 📌 Why This Project Matters
+
+This project demonstrates **practical system security engineering**, combining **computer vision**, **OS-level controls**, and **real-time monitoring** to solve a real privacy problem on consumer systems.
+
+---
+
+## 📄 License
+
+This project is for educational and research purposes.
+
+
+Just say 👍
